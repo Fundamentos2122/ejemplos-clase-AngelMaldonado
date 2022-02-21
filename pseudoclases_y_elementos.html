@@ -1,0 +1,53 @@
+<!-- ******************************************
+*  Author : Angel de Jesus Maldonado   
+*  Created On : Mon Feb 21 2022
+*  File : pseudoclases_y_elementos.html
+******************************************* -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Angel Maldonado">
+    <title>Pseudoclases</title>
+    <style>
+        button:hover {
+            background-color: darkred;
+            color: white;
+        }
+        input[type="checkbox"]:checked {
+            box-shadow: green 4px 4px 2px;
+        }
+        input[type="text"]:focus {
+            border-width: 5px;
+        }
+        p::first-letter {
+            font-size: 24px;
+        }
+        p::first-line {
+            font-style: italic;
+        }
+        p::selection {
+            background-color: yellow;
+        }
+        p.cita::before {
+            content: "\"";
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="text" placeholder="nombre">
+        <br>
+        <input type="checkbox">
+        <label>Check aquí</label>
+        <br>
+        <button>Enviar</button>
+    </form>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos non vero natus placeat aut repudiandae quam culpa nisi, aspernatur hic sint nam laudantium molestias sequi, delectus, vitae fugit. Ex, ipsa.</p>
+    <p class="cita">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat harum aspernatur, debitis velit atque ratione esse, modi possimus molestias iste facere beatae rem minima maxime ut sapiente rerum molestiae officia.</p>
+</body>
+
+</html>
