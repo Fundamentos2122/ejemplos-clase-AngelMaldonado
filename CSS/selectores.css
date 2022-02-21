@@ -26,3 +26,15 @@ div[class|="prueba"] {
 div[class$="prueba"] {
     line-height: 30px;
 }
+
+div[class~="prueba"] {
+    letter-spacing: 20px;
+}
+
+div[class^="prueba"] {
+    text-decoration: underline;
+}
+
+div[class*="prueba"] {
+    text-transform: uppercase;
+}
