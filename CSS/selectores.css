@@ -1,0 +1,28 @@
+/******************************************
+*  Author : Angel de Jesus Maldonado Juarez   
+*  Created On : Mon Feb 21 2022
+*  File : selectores.css
+*******************************************/
+#p1 {
+    font-size: 19px;
+}
+
+p {
+    border: 1px solid red;
+}
+
+div[class] {
+    margin-left: 100px;
+}
+
+div[class="prueba"] {
+    color: pink;
+}
+
+div[class|="prueba"] {
+    background-color: gray;
+}
+
+div[class$="prueba"] {
+    line-height: 30px;
+}
