@@ -1,0 +1,71 @@
+<!-- ******************************************
+*  Author : Angel Maldonado Juarez   
+*  Created On : Thu Mar 17 2022
+*  File : eventos.html
+******************************************* -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Angel Maldonado">
+    <title>Eventos</title>
+</head>
+
+<body>
+    <div id="saludo"></div>
+    <button id="nuevo_saludo">Nuevo saludo</button>
+    <button onclick="nuevoParrafo()">Agrega parrafo</button>
+    <p>Párrafo original</p>
+    <form action="">
+        <select name="" id="mensaje">
+            <option value="Mensaje 1">Mensaje 1</option>
+            <option value="Mensaje 2">Mensaje 2</option>
+            <option value="Mensaje 3">Mensaje 3</option>
+        </select>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", Saludar);
+        
+        let divSaludo = document.getElementById("saludo");
+
+        function Saludar() {
+            divSaludo.innerText = "Hola Mundo";
+        }
+
+        let btnSaludo = document.getElementById("nuevo_saludo");
+
+        btnSaludo.addEventListener("click", function() {
+            divSaludo.innerText = "Nuevo Saludo";
+        });
+        
+        let parrafos = document.getElementsByTagName("p");
+        
+        function nuevoParrafo() {
+            let p = document.createElement("p");
+            p.innerText = "Nuevo parrafo";
+            document.body.appendChild(p);
+        }
+        
+        for(i = 0; i < parrafos.length; i++) {
+            // Cambia el color del parrafo cuando se pase el mouse encima
+            parrafos[i].addEventListener("mouseover", function() {
+                this.style.color = "red";
+            });
+
+            // Cambia el color del parrafo cuando se deje de pasar el mouse encima
+            parrafos[i].addEventListener("mouseout", function() {
+                this.style.color = "black";
+            });
+        }
+
+        let inputMensaje = document.getElementById("mensaje");
+
+        inputMensaje.addEventListener("change", function() {
+            console.log(this.value);
+        });
+    </script>
+</body>
+
+</html>
